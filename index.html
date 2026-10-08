@@ -1,0 +1,24 @@
+<div class="box">
+    <h2>ناوی خۆت بنووسە</h2>
+    <!-- تەنها خانەی ناو -->
+    <input type="text" id="username" placeholder="ناوی تۆ...">
+    <!-- دوگمەی کوتییەکە -->
+    <button id="tapBtn">کوتی لێدە / فەبوو بکە</button>
+    
+    <div id="result"></div>
+</div>
+
+<!-- کودی jQuery بۆ کارپێکردن -->
+<script>
+    $(document).ready(function() {
+        $('#tapBtn').on('click', function() {
+            let name = $('#username').val().trim();
+            
+            if(name !== "") {
+                $('#result').text("بەخێر بێیت، " + name + "! 🎉 فەبوو و کارەکە سەرکەوتوو بوو.").css('color', '#28a745');
+            } else {
+                $('#result').text("⚠️ تکایە سەرەتا ناوی خۆت بنووسە!").css('color', '#dc3545');
+            }
+        });
+    });
+</script>
